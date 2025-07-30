@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Pages - JS Assignment</title>
+    <meta name="description" content="An assignment showcasing JavaScript event handling, interactive elements, and custom form validation.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Interactive Web Page Demo</h1>
+        <p>Bringing web pages to life with JavaScript events and dynamic content.</p>
+    </header>
+
+    <main>
+        <section id="event-handling">
+            <h2>Part 1: Event Handling Basics</h2>
+
+            <div class="interactive-card">
+                <h3>Click Me!</h3>
+                <button id="alertButton">Show Welcome Message</button>
+                <p id="messageDisplay"></p>
+            </div>
+
+            <div class="interactive-card">
+                <h3>Mouse Over & Out</h3>
+                <div id="hoverBox">Hover over me!</div>
+            </div>
+
+            <div class="interactive-card">
+                <h3>Keyboard Fun</h3>
+                <label for="keyboardInput">Type something:</label>
+                <input type="text" id="keyboardInput" placeholder="Press Enter to see message">
+                <p id="keyboardMessage"></p>
+            </div>
+        </section>
+
+        <section id="interactive-elements">
+            <h2>Part 2: Interactive Components</h2>
+
+            <div class="interactive-card">
+                <h3>Light/Dark Mode Toggle</h3>
+                <button id="modeToggle">Toggle Theme: Current (<span id="currentMode">Light</span>)</button>
+            </div>
+
+            <div class="interactive-card">
+                <h3>Simple Counter</h3>
+                <button id="decrementBtn">Decrement</button>
+                <span id="counterValue">0</span>
+                <button id="incrementBtn">Increment</button>
+            </div>
+
+            <div class="interactive-card">
+                <h3>Collapsible FAQ</h3>
+                <div class="faq-item">
+                    <h4 class="faq-question">What is JavaScript?</h4>
+                    <p class="faq-answer hidden">JavaScript is a programming language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else on the web.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-question">What is the DOM?</h4>
+                    <p class="faq-answer hidden">The Document Object Model (DOM) is a programming interface for web documents. It represents the page structure as a tree of objects that JavaScript can interact with.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="form-validation">
+            <h2>Part 3: Custom Form Validation</h2>
+            <p>Please fill out the form. All fields are required and validated with JavaScript.</p>
+
+            <form id="registrationForm" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="John Doe">
+                    <div class="error-message" id="fullNameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com">
+                    <div class="error-message" id="emailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Min 8 characters">
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Must match password">
+                    <div class="error-message" id="confirmPasswordError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="terms">
+                        <input type="checkbox" id="terms" name="terms">
+                        I agree to the <a href="#">Terms & Conditions</a>
+                    </label>
+                    <div class="error-message" id="termsError"></div>
+                </div>
+
+                <button type="submit">Register</button>
+                <div id="formSuccessMessage" class="success-message hidden">Registration successful!</div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All Rights Reserved. JavaScript Interactive Web Assignment.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
